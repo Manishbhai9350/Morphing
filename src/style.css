@@ -13,5 +13,49 @@ html,body {
 main {
   width: 100vw;
   height: 100svh;
-  background: #171717;
+  background: rgb(11, 26, 41);
+}
+
+.buttons {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: .6rem;
+  z-index: 100;
+  padding: 1rem;
+  button {
+    color: rgba(255, 255, 255, 0.7);
+    padding: .4rem 1rem;
+    background:transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: .8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    text-transform: capitalize;
+    &.active {
+      background: #3a3598;
+      border: 1px solid #3a3598;
+      color: white;
+    }
+    &:hover {
+      background: #3a3598;
+      border: 1px solid #3a3598;
+      color: white;
+    }
+  }
+}
+
+@media (max-width:600px) {
+  .buttons {
+    button {
+      font-size: .6rem;
+      letter-spacing: .03rem;
+    }
+  }
 }
