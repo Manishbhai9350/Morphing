@@ -87,9 +87,9 @@ export const Functions = {
     for (let i = 0; i < n; i++) {
       const t = (i / n) * Math.PI * 2;
       const r = Math.cos(q * t) + 2;
-      arr[i * 3] = r * Math.cos(p * t);
+      arr[i * 3] = r * .5 * Math.cos(p * t);
       arr[i * 3 + 1] = Math.sin(q * t);
-      arr[i * 3 + 2] = r * Math.sin(p * t);
+      arr[i * 3 + 2] = r * .5 * Math.sin(p * t);
     }
     return arr;
   },

@@ -2,9 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html,body {
+html,
+body {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -13,7 +15,8 @@ html,body {
 main {
   width: 100vw;
   height: 100svh;
-  background: rgb(11, 26, 41);
+  background: #16324f;
+  color: white;
 }
 
 .buttons {
@@ -25,18 +28,18 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: .6rem;
+  gap: 0.6rem;
   z-index: 100;
   padding: 1rem;
   button {
     color: rgba(255, 255, 255, 0.7);
-    padding: .4rem 1rem;
-    background:transparent;
+    padding: 0.4rem 1rem;
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    font-size: .8rem;
+    font-size: 0.8rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     text-transform: capitalize;
     &.active {
       background: #3a3598;
@@ -51,11 +54,28 @@ main {
   }
 }
 
-@media (max-width:600px) {
+.copy-con {
+  position: absolute;
+  width: 100vw;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(29, 68, 110);
+}
+
+.contact {
+  color: rgb(22, 50, 79);
+}
+
+@media (max-width: 600px) {
   .buttons {
     button {
-      font-size: .6rem;
-      letter-spacing: .03rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.03rem;
     }
   }
 }
